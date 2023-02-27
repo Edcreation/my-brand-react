@@ -1,0 +1,158 @@
+$primary-color: #03002ef9;
+$secondary-color: #fff;
+$background-color: #d8d8d857;
+
+.blogs {
+    height: 900px;
+    padding-top: 40px;
+
+    .top-bar {
+        height: 200px;
+        background-image: url('../../Assets/Images/kigali.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -90px;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+        width: 100%;
+        border-bottom: 1px solid #00000052;
+
+        form {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            input {
+                width: 50%;
+                padding: 5px;
+                font-size: 20px;
+                border: 1px solid #00000052;
+                background: #c6c6c6;
+                outline: none;
+            }
+            button {
+                padding: 5px;
+                font-size: 20px;
+                border: 1px solid #00000052;
+                background: #00000000;
+                background: $secondary-color;
+                outline: none;
+                color: $primary-color;
+                cursor: pointer;
+            }
+            input:-webkit-autofill{
+                -webkit-box-shadow: 0 0 0 30px $background-color inset !important;
+            }
+        }
+    }
+    .loader {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background: #00000022;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @keyframes rotating {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 6px solid $background-color;
+            border-top: 6px solid #000;
+            border-bottom: 6px solid #000;
+            transition: rotate(360) in;
+            position: absolute;
+            right: 50%;
+            top: 40px;
+            transition: .6s;
+            animation: rotating .5s linear infinite;
+        }
+    }
+    .blogs-container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        justify-items: center;
+
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .blog-card {
+            width: 270px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: $background-color;
+            border: 1px solid #00000023;
+            transition: .6s;
+            p {
+                width: 95%;
+            }
+            .blog-image {
+                overflow: hidden;
+                background: #000;
+                height: 80%;
+                width: 100%;
+                img {
+                    opacity: 0.7;
+                    width: 100%;
+                    transition: 1s;
+                    height: 100%;
+                }
+                img:hover {
+                    transform: rotate(1deg);
+                    scale: 1.1;
+                    opacity: 1.2;
+                }
+            }
+            .btn {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                .readmore-btn {
+                    text-decoration: none;
+                    color: #000;
+                    padding: 10px;
+                    background: $primary-color;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+    .blogs .blogs-container {
+        grid-template-columns: auto auto;
+    } 
+}
+@media screen and (max-width: 680px) {
+    .blogs .blogs-container {
+        grid-template-columns: auto;
+    } 
+    .blogs .top-bar form input {
+        width: 90%;
+    }
+}

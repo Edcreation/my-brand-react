@@ -1,0 +1,7 @@
+export { default as Portfolio } from './Portfolio/Portfolio'
+export { default as Login } from './Login/Login'
+export { default as SignUp } from './Login/SignUp'
+export { default as Contacts } from './Contacts/Contacts'
+export { default as Blogs } from './Blogs/Blogs'
+export { default as SinglePage } from './Blogs/SinglePage/SinglePage'
+export { default as Profile } from './Profile/Profile'

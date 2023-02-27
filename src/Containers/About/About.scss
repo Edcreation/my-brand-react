@@ -1,0 +1,285 @@
+$primary-color: #03002ef9;
+$secondary-color: #fff;
+$background-color: #e5e5e5;
+
+@mixin line($length) {
+    background: $primary-color;
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: $length;
+}
+.about {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    background: $primary-color;
+    .about-container {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .title {
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            p {
+                margin: 0;
+                color: $secondary-color;
+
+            }
+            .line {
+                height: 5px;
+                width: 90px;
+                background: $secondary-color;
+                border-radius: 20px;
+                margin-top: 5px;
+                margin-left: 8px;
+            }
+        };
+        .text-card {
+            width: 100%;
+            padding: 20px;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            color: $secondary-color;
+            .p {
+                width: 80%;
+                font-size: 20px;
+                border-radius: 10px;
+                border: 1px solid #00000039;
+                padding: 20px;
+                font-weight: 540;
+                background: $background-color;
+                color: $primary-color;
+            }
+            button {
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                color: $secondary-color;
+                background: $primary-color;
+                border-radius: 2px;
+                margin-top: 20px;
+            }
+        }
+        .skills {
+            width: 100%;
+            margin-top: 20px;
+            background: $secondary-color;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            justify-content: flex-start;
+            margin-bottom: 50px;
+            .skills-amt {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 5px;
+
+                .skill {
+                    width: 80%;
+                    margin-top: 10px;
+                    p {
+                        margin: 0;
+                        width: auto;
+                        color: $primary-color;
+                        text-align: left;
+                    }
+                    .javascript {
+                        @include line(80%)
+                    }
+                    .nodejs {
+                        @include line(60%)
+                    }
+                    .reactjs {
+                        @include line(70%)
+                    }
+                    .python {
+                        @include line(55%)
+                    }
+                    .mongodb {
+                        @include line(65%)
+                    }
+                    .ui {
+                        @include line(75%)
+                    }
+                }
+            }
+            .certified {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                .title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+                    p {
+                        color: $primary-color;
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                    .line {
+                        height: 4px;
+                        width: 10%;
+                        background: $primary-color;
+                    }
+                }
+                .cert {
+                    width: 100%;
+                    margin-left: 20px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-items: center;
+                    gap: 20px;
+                    padding-top: 20px;
+                    
+                    .card {
+                        background: #0e359f;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $secondary-color;
+                        padding: 0px;
+                        border-radius: 4px;
+                        width: 140px;
+                        .img {
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .about {
+        .about-container {
+            .title {
+                margin-bottom: 20px;
+            }
+            .text-card {
+                padding: 0px;
+            }
+            .skills {
+                width: 100%;
+                margin-top: 20px;
+                background: $secondary-color;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                justify-content: flex-start;
+                margin-bottom: 50px;
+                .skills-amt {
+                    width: 100%;
+                    .skill {
+                        width: 80%;
+                        margin-top: 10px;
+                        p {
+                            margin: 0;
+                            width: auto;
+                            color: $primary-color;
+                            text-align: left;
+                        }
+                        .javascript {
+                            @include line(80%)
+                        }
+                        .nodejs {
+                            @include line(60%)
+                        }
+                        .reactjs {
+                            @include line(70%)
+                        }
+                        .python {
+                            @include line(55%)
+                        }
+                        .mongodb {
+                            @include line(65%)
+                        }
+                        .ui {
+                            @include line(75%)
+                        }
+                    }
+                }
+                .certified {
+                    width: 100%;
+                    .title {
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 100%;
+                        p {
+                            color: $primary-color;
+                            font-size: 20px;
+                            width: 100%;
+                        }
+                        .line {
+                            height: 4px;
+                            width: 10%;
+                            background: $primary-color;
+                        }
+                    }
+                    .cert {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-items: center;
+                        gap: 10px;
+                        padding-top: 20px;
+                        
+                        .card {
+                            background: #0e359f;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: $secondary-color;
+                            border-radius: 4px;
+                            .img {
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img {
+                                    width: 20px;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+}
