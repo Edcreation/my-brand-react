@@ -102,6 +102,8 @@ function SinglePage() {
     }
     document.getElementById('meta').setAttribute("name", "description");
     document.getElementById('meta').setAttribute("content", blog.title);
+    document.getElementById('meta-image').setAttribute("name", "image");
+    document.getElementById('meta-image').setAttribute("content", blog.imageUrl);
   return (
     <div className={`singlepage singlepage-${Dark()}` }>
           {loading ? <div className='loader'><div className="spinner"></div></div> : null}
