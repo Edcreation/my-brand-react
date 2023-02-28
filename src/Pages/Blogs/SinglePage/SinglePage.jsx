@@ -101,8 +101,8 @@ function SinglePage() {
       isLoggedIn = true
     }
     useEffect(() => {
-      var myText = document.getElementsByClassName('content-box')[0].innerHTML
-      document.getElementsByTagName('meta')[0].setAttribute("content", myText);
+      document.getElementById('meta').setAttribute("name", "description");
+      document.getElementById('meta').setAttribute("content", blog.title);
     }, [])
   return (
     <div className={`singlepage singlepage-${Dark()}` }>
