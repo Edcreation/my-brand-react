@@ -13,6 +13,7 @@ function Navbar() {
       localStorage.getItem('theme') || 'light'
     );
     const toggleTheme = () => {
+      document.body.classList.add(theme)
       if (theme === 'light') {
         setTheme('dark');
       } else {
@@ -70,6 +71,7 @@ function Navbar() {
           element.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
       if (checkLog) {
         return (
             <nav className={`App ${Dark()}`}>
@@ -89,7 +91,7 @@ function Navbar() {
                         }
                       </div>
                   </div>
-                  <div className={`drop-down ${Dark()}`} style={{ display: (active ? 'flex' : 'none') }}>
+                  <div className={`drop-down drop-down-${Dark()}`} style={{ display: (active ? 'flex' : 'none') }}>
                     {LoggedInAsAdmin ? "" : ''}
                     <Link to="/profile">Profile</Link>
                     

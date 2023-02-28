@@ -21,9 +21,10 @@ function Blogs() {
             console.log(err);
           });
       };
+      
   return (
     <div className={`blogs ${Dark()}`}>
-        <div className="top-bar">
+        <div className="top-bar" >
             <form action="">
                 <input type="text" name="search" id="search" />
                 <button><i className="fa fa-search" aria-hidden="true"></i></button>

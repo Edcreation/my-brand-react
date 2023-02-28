@@ -121,6 +121,10 @@ nav .links .dp-box i {
     text-decoration: none;
     transition: .6s;
 }
+.drop-down-dark a{
+    background: #131516;
+    color: #d8d8d8;
+}
 .drop-down a:hover {
     background: #000;
     color: #fff;
