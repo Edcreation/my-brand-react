@@ -75,7 +75,15 @@ $background-color: #d8d8d8;
             border-left: 1px solid #605f5f;
             border-right: 1px solid #605f5f;
             p img {
-                width: 50%;
+                max-width: 50%;
+            }
+            figure {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 50%;
+                }
             }
             a{
                 color: #0045e5c1;
