@@ -1,9 +1,10 @@
 import React from 'react'
 import './About.scss'
 import tick from '../../Assets/Images/approval.png'
+import Dark from '../../components/Dark'
 function About() {
   return (
-    <div className='about' id='aboutme'>
+    <div className={`about about-${Dark()}`} id='aboutme'>
         <div className="about-container">
             <div className="title">
                 <p>About Me</p>
@@ -61,27 +62,27 @@ function About() {
                   <div className="line"></div>
                 </div>
                 <div className="cert">
-                  <a href='' className="card">
+                  <a href='https://www.coursera.org/account/accomplishments/verify/85G7X2YW3G4T' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">HTML5</div>
                   </a>
-                  <a href='' className="card">
+                  <a href='https://www.coursera.org/account/accomplishments/verify/85G7X2YW3G4T' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">CSS</div>
                   </a>
-                  <a href='' className="card">
+                  <a href='https://www.freecodecamp.org/certification/Mugisha_Eddy/javascript-algorithms-and-data-structures' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">JavaScript</div>
                   </a>
-                  <a href='' className="card">
+                  <a href='https://www.coursera.org/account/accomplishments/verify/UJ9PFP9XX2D5' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">Django</div>
                   </a>
-                  <a href='' className="card">
+                  <a href='https://www.freecodecamp.org/certification/Mugisha_Eddy/javascript-algorithms-and-data-structures' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">DSA</div>
                   </a>
-                  <a href='' className="card">
+                  <a href='https://www.freecodecamp.org/certification/Mugisha_Eddy/javascript-algorithms-and-data-structures' className="card">
                     <div className="img"><img src={tick} alt="tick" /></div>
                     <div className="txt">NodeJS</div>
                   </a>

@@ -8,8 +8,16 @@ $background-color: #d8d8d8;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: $background-color;
     height: 700px;
+    .p-box {
+        width: 50%;
+        border: 1px solid #4e4e4e7f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 8px;
+    }
     .profile-dp {
         width: 250px;
         height: 250px;
@@ -34,5 +42,30 @@ $background-color: #d8d8d8;
             color: $background-color;
             padding: 20px;
         }
+    }
+}
+
+@media (max-width: 600px) {
+    .profile .p-box {
+        width: 80%;
+    }
+}
+@media (max-width: 400px) {
+    .profile .p-box {
+        width: 90%;
+    }
+    .profile .profile-dp,.profile .profile-dp img {
+        width: 150px;
+        height: 150px;
+    }
+    .profile .profile-name p {
+        padding: 10px;
+        width: 60%;
+    }
+    .profile .profile-name {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 }

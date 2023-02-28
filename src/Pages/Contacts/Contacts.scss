@@ -10,7 +10,6 @@ $background-color: #d8d8d8;
     margin-top: 40px;
     background: $primary-color;
     color: $background-color;
-    height: 600px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -18,7 +17,9 @@ $background-color: #d8d8d8;
     flex-direction: column;
 
     .form-container {
-        width: 95%;
+        min-width: 70%;
+        margin-top: 30px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -27,7 +28,7 @@ $background-color: #d8d8d8;
         form {
             min-width: 70%;
             background: $background-color;
-            padding: 10px;
+            padding: 6px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -127,6 +128,70 @@ $background-color: #d8d8d8;
                     color: #0000008c;
                     width: 100%;
                     text-align: end;
+                }
+            }
+        }
+    }
+
+}
+.contacts-dark {
+    background: $primary-color;
+    color: $background-color;
+    .form-container {
+        form {
+            background: #141414;
+            border: 1px solid #d9d9d92f;
+            color: #c8c8c8;
+            transition: .5s;
+            .title {
+                color: #c8c8c8;
+                .line {
+                    background: #c8c8c8;
+                }
+            }
+ 
+            .input {
+                p {
+                    color: #c8c8c8;
+                }
+                input {
+                    border: 1px solid #c9c9c993;
+                    color: #c8c8c8;
+                }
+                input:-webkit-autofill{
+                    -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
+                    -webkit-text-fill-color: #c8c8c8;
+                }
+                button {
+                    background: $primary-color;
+                    color: #c8c8c8;
+                    border: 1px solid #c3c3c348;
+                }
+                button:hover {
+                    background: #c8c8c8;
+                    color: $primary-color;
+                }
+                .text {
+                    border: 1px solid #00000048;
+                    border-radius: 3px;
+                    textarea {
+                        -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
+                        box-shadow: 0 0 0 30px #141414 inset !important;
+                        border: 1px solid #c5c5c548;
+                        color: #c8c8c8;
+                    }
+                    input {
+                        height: 20px;
+                        border: none;
+                    }
+                    i {
+                        width: 10%;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+                a {
+                    color: #0000008c;
                 }
             }
         }

@@ -30,10 +30,9 @@ $background-color: #e5e5e5;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            color: $background-color;
             p {
                 margin: 0;
-                color: $secondary-color;
-
             }
             .line {
                 height: 5px;
@@ -58,11 +57,9 @@ $background-color: #e5e5e5;
                 width: 80%;
                 font-size: 20px;
                 border-radius: 10px;
-                border: 1px solid #00000039;
+                border: 1px solid #c2c2c239;
                 padding: 20px;
                 font-weight: 540;
-                background: $background-color;
-                color: $primary-color;
             }
             button {
                 padding: 10px;
@@ -72,6 +69,7 @@ $background-color: #e5e5e5;
                 border: none;
                 color: $secondary-color;
                 background: $primary-color;
+                border: 1px solid #c2c2c239;
                 border-radius: 2px;
                 margin-top: 20px;
             }
@@ -144,6 +142,117 @@ $background-color: #e5e5e5;
                         height: 4px;
                         width: 10%;
                         background: $primary-color;
+                    }
+                }
+                .cert {
+                    width: 100%;
+                    margin-left: 20px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-items: center;
+                    gap: 20px;
+                    padding-top: 20px;
+                    
+                    .card {
+                        background: #0e359f;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $secondary-color;
+                        padding: 0px;
+                        border-radius: 4px;
+                        width: 140px;
+                        .img {
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.about-dark {
+    background: $primary-color;
+    .about-container {
+        .title {
+            color: $background-color;
+            p {
+                margin: 0;
+            }
+            .line {
+                background: $secondary-color;
+            }
+        };
+        .text-card {
+            color: $secondary-color;
+            .p {
+                border: 1px solid #c2c2c239;
+            }
+            button {
+                color: $secondary-color;
+                background: $primary-color;
+            }
+        }
+        .skills {
+            background: #1a1a1df9;
+            .skills-amt {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 5px;
+                .skill {
+                    width: 80%;
+                    margin-top: 10px;
+                    p {
+                        color: $background-color;
+                    }
+                    .javascript {
+                        @include line(80%);
+                        background: $background-color;
+                    }
+                    .nodejs {
+                        @include line(60%);
+                        background: $background-color;
+                    }
+                    .reactjs {
+                        @include line(70%);
+                        background: $background-color;
+                    }
+                    .python {
+                        @include line(55%);
+                        background: $background-color;
+                    }
+                    .mongodb {
+                        @include line(65%);
+                        background: $background-color;
+                    }
+                    .ui {
+                        @include line(75%);
+                        background: $background-color;
+                    }
+                }
+            }
+            .certified {
+                .title {
+                    p {
+                        color: $secondary-color;
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                    .line {
+                        height: 4px;
+                        width: 10%;
+                        background: $secondary-color;
                     }
                 }
                 .cert {

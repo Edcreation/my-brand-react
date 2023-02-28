@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Blogs.scss'
+import Dark from '../../components/Dark';
 import axios from 'axios';
 function Blogs() {
     const [blogs, setBlogs] = useState([])
@@ -21,7 +22,7 @@ function Blogs() {
           });
       };
   return (
-    <div className='blogs'>
+    <div className={`blogs ${Dark()}`}>
         <div className="top-bar">
             <form action="">
                 <input type="text" name="search" id="search" />

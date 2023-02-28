@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams,Link } from 'react-router-dom'
 import Comment from './Comment'
 import axios from 'axios'
+import Dark from '../../../components/Dark'
 import './SinglePage.scss'
 function SinglePage() {
     let {id} = useParams()
@@ -100,10 +101,10 @@ function SinglePage() {
       isLoggedIn = true
     }
   return (
-    <div className='singlepage' >
+    <div className={`singlepage singlepage-${Dark()}` }>
           {loading ? <div className='loader'><div className="spinner"></div></div> : null}
-        <div className="front" style={{ background: `url(${blog.imageUrl})`}}>
-          {/* <div className="back-front" ></div> */}
+        <div className="front">
+          <img src={blog.imageUrl} alt={blog.title} className="back-front" ></img>
           <img src={blog.imageUrl} alt={blog.title} />
           <p>{blog.title}</p>
         </div>

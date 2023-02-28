@@ -20,10 +20,7 @@ export default function App() {
     return (
       <Router>
         <div className="app">
-          <Navbar />
-          
-          <Footer />
-        </div>
+        <Navbar />  
         <Routes>
           <Route exact path='/' element={<Portfolio />}></Route>
           <Route exact path='/signup' element={<SignUp />}></Route>
@@ -31,9 +28,12 @@ export default function App() {
           <Route exact path='/contact-me' element={<Contacts />}></Route>
           <Route exact path='/#aboutme' element={< Portfolio />}></Route>
           <Route exact path='/single-blog/:id' element={< SinglePage />}></Route>
-          <Route exact path='/blogs' element= { <Protected isLoggedIn={LoggedIn} >< Blogs /></Protected> }></Route>
+          <Route exact path='/blogs' element={< Blogs />}></Route>
           <Route exact path='/profile' element= { <Protected isLoggedIn={LoggedIn} >< Profile /></Protected> }></Route>
         </Routes>
+        <Footer />
+        </div>
+        
       </Router>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Contacts.scss'
+import Dark from '../../components/Dark'
 function Contacts() {
     const [email, setEmail] = useState('')
     const [name, setName] = useState('') 
@@ -50,7 +51,7 @@ function Contacts() {
         console.log(content)
     }
   return (
-    <div className='contacts'>
+    <div className={`contacts contacts-${Dark()}`}>
         <div className="form-container">
             <form action="" onSubmit={handleSubmit} id="frm">
                 <div className="pop-up" id='pop'>{pop}</div>

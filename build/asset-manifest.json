@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.03cda4d2.css",
+    "main.js": "/static/js/main.61c4fe59.js",
+    "static/media/kigali.jpg": "/static/media/kigali.1499abee8efe1c94860b.jpg",
+    "static/media/instagram.png": "/static/media/instagram.8e408da00539cdef4629.png",
+    "static/media/dp.jpg": "/static/media/dp.7331cafa9f40eb46b963.jpg",
+    "static/media/default.png": "/static/media/default.07300db72dd3c12efff9.png",
+    "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
+    "static/media/gmail.png": "/static/media/gmail.23d2a9b0f4cc2cae2ed1.png",
+    "index.html": "/index.html",
+    "main.03cda4d2.css.map": "/static/css/main.03cda4d2.css.map",
+    "main.61c4fe59.js.map": "/static/js/main.61c4fe59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03cda4d2.css",
+    "static/js/main.61c4fe59.js"
+  ]
+}

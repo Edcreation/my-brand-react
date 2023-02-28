@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import './Navbar.css'
 import { Navigate, useNavigate } from 'react-router-dom';
+import Dark from '../Dark';
 import defaultImage from '../../Assets/Images/default.png'
 function Navbar() {
+
     const [active, setActive] = useState(false)
     const navigate = useNavigate();
     const [theme, setTheme] = useState(
@@ -15,17 +17,11 @@ function Navbar() {
       } else {
         setTheme('light');
       }
+      navigate(0)
     };
-    // useEffect(() => {
-    //   localStorage.setItem('theme', theme);
-    //   if (document.getElementsByClassName('singlepage')[0]) {
-    //     document.getElementsByClassName('singlepage')[0].classList.toggle('singlepage-dark') 
-    //   }
-    //   if (document.getElementsByClassName('drop-down')[0]) {
-    //     document.getElementsByClassName('drop-down')[0].classList.toggle('drop-down-dark') 
-    //   }
-      
-    // }, [theme]);
+    useEffect(() => {
+      localStorage.setItem('theme', theme);
+    }, [theme]);
     let LoggedInAsAdmin = false
 
     const toggleNav = () => {
@@ -67,7 +63,7 @@ function Navbar() {
     };
       if (checkLog) {
         return (
-            <nav className={`App ${theme}`}>
+            <nav className={`App ${Dark()}`}>
               <div className="logo">
                 J<i className="fa fa-code" aria-hidden="true"></i>D
               </div>
@@ -77,9 +73,14 @@ function Navbar() {
                       <Link to="/#aboutme" onClick={scrollToAbout}>About</Link>
                       <Link to="/blogs">Blogs</Link>
                       <Link to="/contact-me">Contacts</Link>
-                      <a onClick={toggleTheme}><i className="fa fa-circle" aria-hidden="true"></i></a>
+                      <div className="mode">
+                        {theme === "dark" ? 
+                        <img onClick={toggleTheme} src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="" /> : 
+                        <img onClick={toggleTheme} src="https://cdn-icons-png.flaticon.com/512/1812/1812660.png" alt="" />
+                        }
+                      </div>
                   </div>
-                  <div className="drop-down" style={{ display: (active ? 'flex' : 'none') }}>
+                  <div className={`drop-down ${Dark()}`} style={{ display: (active ? 'flex' : 'none') }}>
                     {LoggedInAsAdmin ? "" : ''}
                     <Link to="/profile">Profile</Link>
                     
@@ -95,7 +96,7 @@ function Navbar() {
         )
       }
       return (
-        <nav>
+        <nav className={`App ${Dark()}`}>
               <div className="logo">
                 J<i className="fa fa-code" aria-hidden="true"></i>D
               </div>
@@ -105,7 +106,13 @@ function Navbar() {
                   <Link to="/#aboutme" onClick={scrollToAbout}>About</Link>
                   <Link to="/blogs">Blogs</Link>
                   <Link to="/contact-me">Contacts</Link>
-                  <a onClick={toggleTheme}><i className="fa fa-circle" aria-hidden="true"></i></a>
+                  <div className="mode">
+                    {theme === "dark" ? 
+                    <img onClick={toggleTheme} src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="" /> : 
+                    <img onClick={toggleTheme} src="https://cdn-icons-png.flaticon.com/512/1812/1812660.png" alt="" />
+                    }
+                    
+                  </div>
               </div>
               <div className="nav-btns">
                   <Link to="/signup">Sign Up</Link>
