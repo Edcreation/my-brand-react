@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.scss'
 import { useState } from "react";
-import { BrowserRouter as Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route, Link, Navigate } from 'react-router-dom';
 function SignUp() {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
