@@ -100,10 +100,8 @@ function SinglePage() {
     if (localStorage.getItem("cooltoken") && localStorage.getItem("tempLog")) {
       isLoggedIn = true
     }
-    useEffect(() => {
-      document.getElementById('meta').setAttribute("name", "description");
-      document.getElementById('meta').setAttribute("content", blog.title);
-    }, [])
+    document.getElementById('meta').setAttribute("name", "description");
+    document.getElementById('meta').setAttribute("content", blog.title);
   return (
     <div className={`singlepage singlepage-${Dark()}` }>
           {loading ? <div className='loader'><div className="spinner"></div></div> : null}
