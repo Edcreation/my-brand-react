@@ -70,13 +70,15 @@ $background-color: #d8d8d8;
                     width: 100%;
                     margin: 5px 0;
                     outline: none;
-                    border: 1px solid #00000048;
+                    border: none;
                     background: transparent;
                     font-size: 15px;
                     border-radius: 3px;
+                    outline: none;
                 }
                 input:-webkit-autofill{
                     -webkit-box-shadow: 0 0 0 30px $background-color inset !important;
+                    outline: none;
                 }
                 button {
                     width: 60%;
@@ -130,8 +132,47 @@ $background-color: #d8d8d8;
                     font-size: 15px;
                     text-decoration: none;
                     color: #0000008c;
-                    width: 100%;
                     text-align: end;
+                }
+            }
+        }
+    }
+}
+
+.login-dark {
+    background: $primary-color;
+    .container {
+        form {
+            width: 100%;
+            background: #141414;
+            color: #ececec;
+            border: 1px solid #afafaf2f;
+            .title {
+                .line {
+                    background: #ececec;
+                }
+            }
+            .input {
+                input {
+                    color: #ececec;
+                    border: none;
+                }
+                input:-webkit-autofill{
+                    -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
+                    -webkit-text-fill-color: #ececec;
+                    border: none;
+                }
+                button {
+                    background: #d8d8d8;
+                }
+                .email {
+                    border: 1px solid #82828248;
+                }
+                .password {
+                    border: 1px solid #82828248;
+                }
+                a {
+                    color: #034f55f9;
                 }
             }
         }

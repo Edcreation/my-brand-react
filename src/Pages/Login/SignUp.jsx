@@ -1,6 +1,7 @@
 import React from 'react'
 import './Login.scss'
 import { useState } from "react";
+import Dark from '../../components/Dark';
 import { BrowserRouter as Router,Routes, Route, Link, Navigate } from 'react-router-dom';
 function SignUp() {
     const [email, setEmail] = useState('')
@@ -59,7 +60,7 @@ function SignUp() {
         setIcon(!icon)
       };
   return (
-    <div className='login'>
+    <div className={`login login-${Dark()}`}>
         <div className="container">
             <div className="pop-up" id='pop'>{pop}</div>
             <form action="" onSubmit={handleSubmit}>
