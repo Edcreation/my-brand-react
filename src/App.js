@@ -1,15 +1,11 @@
-import { useState } from "react"
 import "./App.css";
 import { Navbar, Footer } from "./components";
 import { Portfolio, Login, SignUp, Contacts, Blogs, SinglePage, Profile } from "./Pages";
-import { Main } from "./Dashboard";
-import { About } from "./Containers";
 import Protected from "./components/Protected/Protected";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from 'react-router-dom';
 
 export default function App() {

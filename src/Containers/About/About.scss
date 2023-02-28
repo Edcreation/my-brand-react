@@ -81,7 +81,7 @@ $background-color: #e5e5e5;
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 10px;
+            padding: 20px;
             justify-content: flex-start;
             margin-bottom: 50px;
             .skills-amt {
@@ -292,17 +292,12 @@ $background-color: #e5e5e5;
 
 @media (max-width: 700px) {
     .about {
+        padding: 10px 0;
         .about-container {
-            .title {
-                margin-bottom: 20px;
-            }
-            .text-card {
-                padding: 0px;
-            }
+            margin-top: 20px;
             .skills {
                 width: 100%;
                 margin-top: 20px;
-                background: $secondary-color;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -317,26 +312,7 @@ $background-color: #e5e5e5;
                         p {
                             margin: 0;
                             width: auto;
-                            color: $primary-color;
                             text-align: left;
-                        }
-                        .javascript {
-                            @include line(80%)
-                        }
-                        .nodejs {
-                            @include line(60%)
-                        }
-                        .reactjs {
-                            @include line(70%)
-                        }
-                        .python {
-                            @include line(55%)
-                        }
-                        .mongodb {
-                            @include line(65%)
-                        }
-                        .ui {
-                            @include line(75%)
                         }
                     }
                 }
@@ -350,14 +326,12 @@ $background-color: #e5e5e5;
                         flex-direction: column;
                         width: 100%;
                         p {
-                            color: $primary-color;
                             font-size: 20px;
                             width: 100%;
                         }
                         .line {
                             height: 4px;
                             width: 10%;
-                            background: $primary-color;
                         }
                     }
                     .cert {

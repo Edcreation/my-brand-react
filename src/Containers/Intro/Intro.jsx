@@ -35,13 +35,7 @@ function Intro() {
                     <a href="https://edcreation.github.io/CV-html-css-javascript">Download CV</a>
                 </div>
             </div>
-            <div className="sub">
-                <div className="title">Subscribe to my News Letter </div>
-                <form action="">
-                    <input type="email" name="email" id="email" placeholder='Enter Email' />
-                    <button>SUBSCRIBE</button>
-                </form>
-            </div>
+            
         </div>
     </div>
   )

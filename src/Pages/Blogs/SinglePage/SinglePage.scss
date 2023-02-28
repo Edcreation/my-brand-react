@@ -126,7 +126,7 @@ $background-color: #d8d8d8;
                     border: none;
                     outline: none;
                     background: $primary-color;
-                    color: $secondary-color;
+                    color: #fffffff6;
                 }
             }
         }
@@ -184,6 +184,7 @@ $background-color: #d8d8d8;
                             width: 30px;
                             height: 30px;
                             border-radius: 50%;
+                            border: 1px solid #000;
                         }
                         p {
                             margin-left: 5px;
@@ -281,6 +282,9 @@ $background-color: #d8d8d8;
                     border: 1px solid #ffffff31;
                     .com {
                         border-left: 1px solid #0000005f;
+                    }
+                    .com-image img {
+                        border: 1px solid #ffffff;
                     }
                 }
             }

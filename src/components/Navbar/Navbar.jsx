@@ -7,6 +7,7 @@ import defaultImage from '../../Assets/Images/default.png'
 function Navbar() {
 
     const [active, setActive] = useState(false)
+    const [nav, setNav] = useState('')
     const navigate = useNavigate();
     const [theme, setTheme] = useState(
       localStorage.getItem('theme') || 'light'
@@ -19,6 +20,14 @@ function Navbar() {
       }
       navigate(0)
     };
+    const toggleNavBar = () => {
+      if (nav == 'flex') {
+        setNav('')
+      }
+      else {
+        setNav('flex')
+      }
+    }
     useEffect(() => {
       localStorage.setItem('theme', theme);
     }, [theme]);
@@ -68,7 +77,7 @@ function Navbar() {
                 J<i className="fa fa-code" aria-hidden="true"></i>D
               </div>
               <div className="links">
-                  <div className="nav-links">
+                  <div className={`nav-links nav-links-${Dark()}`} style={{display: `${nav}`}}>
                       <Link to="/" onClick={scrollToIntro}>Home</Link>
                       <Link to="/#aboutme" onClick={scrollToAbout}>About</Link>
                       <Link to="/blogs">Blogs</Link>
@@ -91,6 +100,9 @@ function Navbar() {
                       <img src={userDp} alt="" />
                       <i className="fa fa-caret-down" aria-hidden="true"></i>
                   </div>
+                  <div className="nav-down-btn" onClick={toggleNavBar}  id='nav-btn'>
+                  <i className="fa fa-bars" aria-hidden="true"></i>
+                  </div>
               </div>
             </nav>
         )
@@ -101,7 +113,7 @@ function Navbar() {
                 J<i className="fa fa-code" aria-hidden="true"></i>D
               </div>
           <div className="links">
-              <div className="nav-links">
+              <div className={`nav-links nav-links-${Dark()}`} style={{display: `${nav}`}}>
                   <Link to="/" onClick={scrollToIntro}>Home</Link>
                   <Link to="/#aboutme" onClick={scrollToAbout}>About</Link>
                   <Link to="/blogs">Blogs</Link>
@@ -117,6 +129,9 @@ function Navbar() {
               <div className="nav-btns">
                   <Link to="/signup">Sign Up</Link>
                   <Link to="/login" className="button">Login</Link>
+              </div>
+              <div className="nav-down-btn" onClick={toggleNavBar}>
+                <i className="fa fa-bars" aria-hidden="true"></i>
               </div>
           </div>
         </nav>

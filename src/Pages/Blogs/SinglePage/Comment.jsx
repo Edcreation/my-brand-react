@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React from 'react'
 import defaultImage from '../../../Assets/Images/default.png'
 function Comment(props) {

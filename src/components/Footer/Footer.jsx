@@ -24,7 +24,13 @@ function Footer() {
         Thanks for visiting my portfolio! 
         Let's work together to bring your 
         vision to life. Mugisha Eddy
-
+        </div>
+        <div className={`sub sub-${Dark()}`}>
+            <div className="title">Subscribe to my News Letter </div>
+              <form action="">
+                <input type="email" name="email" id="email" placeholder='Enter Email' />
+                <button>SUBSCRIBE</button>
+              </form>
         </div>
       </div>
       <div className="footer-right">

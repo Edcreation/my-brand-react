@@ -100,7 +100,6 @@ $background-color: #d8d8d8;
                     flex-direction: row;
                     align-items: center;
                     border: 1px solid #00000048;
-                    
                     border-radius: 3px;
                     textarea {
                         width: 100%;
@@ -149,7 +148,7 @@ $background-color: #d8d8d8;
                     background: #c8c8c8;
                 }
             }
- 
+            
             .input {
                 p {
                     color: #c8c8c8;
@@ -172,7 +171,7 @@ $background-color: #d8d8d8;
                     color: $primary-color;
                 }
                 .text {
-                    border: 1px solid #00000048;
+                    border: 1px solid #90909048;
                     border-radius: 3px;
                     textarea {
                         -webkit-box-shadow: 0 0 0 30px #141414 inset !important;
