@@ -2,9 +2,14 @@ import React, { useEffect, useState } from 'react'
 
 function Bbar(props) {
   let id = props.id
+  let uid
+  if (localStorage.getItem("tempLog")) {
+    uid = JSON.parse(localStorage.getItem("tempLog"))._id
+  }
+  let count = props.likecount
   const [liked, setLiked] = useState(false)
-  let arr = JSON.parse(localStorage.getItem("likes") || "[]")
-  localStorage.setItem("likes", JSON.stringify(arr))
+  let arr = JSON.parse(localStorage.getItem(`${uid}_likes`) || "[]")
+  localStorage.setItem(`${uid}_likes`, JSON.stringify(arr))
   useEffect(() => {
     for (let i = 0; i < arr.length; i++) {
       if (arr[i] == id) {
@@ -25,7 +30,7 @@ function Bbar(props) {
     if (content.Message === 'Liked') {
       setLiked(true)
       arr.push(id)
-      localStorage.setItem("likes", JSON.stringify(arr))
+      localStorage.setItem((`${uid}_likes`), JSON.stringify(arr))
     } else {
       setLiked(false)
       function removeItemAll(arr, value) {
@@ -40,7 +45,7 @@ function Bbar(props) {
         return arr;
       }
       removeItemAll(arr, id)
-      localStorage.setItem("likes", JSON.stringify(arr))
+      localStorage.setItem(`${uid}_likes`, JSON.stringify(arr))
     }
   }
   const scrollToComments = () => {
@@ -49,15 +54,20 @@ function Bbar(props) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  let isLoggedIn = false
+    if (localStorage.getItem("cooltoken") && localStorage.getItem("tempLog")) {
+      isLoggedIn = true
+    }
   return (
     <div className='bar'>
-      <div className="likes-btn">
+      {isLoggedIn ? <div className="likes-btn">
         {liked ? 
-          <i className="fa fa-heart" onClick={Like}  style={{ color: 'red' }} aria-hidden="true"> Liked</i>
-          : <i className="fa fa-heart" onClick={Like} style={{ fontWeight: '400', }} aria-hidden="true"> Like</i>
+          <i className="fa fa-heart" onClick={Like}  style={{ color: 'red' }} aria-hidden="true"> Liked {count}</i>
+          : <i className="fa fa-heart" onClick={Like} style={{ fontWeight: '400', }} aria-hidden="true"> Like {count}</i>
       }
-      </div>
-      <button onClick={scrollToComments}>Comments</button>
+      q</div>
+      : <button>{count} Likes</button> }
+      <button onClick={scrollToComments}>{props.length} <i className="fa fa-comments" aria-hidden="true"></i> Comments</button>
     </div>
   )
 }

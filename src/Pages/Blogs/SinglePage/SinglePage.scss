@@ -17,7 +17,11 @@ $background-color: #d8d8d8;
 
         button {
             cursor: pointer;
-            
+            padding: 5px;
+            background: none;
+            color: #191919;
+            border: none;
+
         }
         .likes-btn {
             margin-right: 10px;
@@ -39,7 +43,7 @@ $background-color: #d8d8d8;
         left: 0;
         bottom: 0;
         height: 700px;
-        background: #9d9d9ddf;
+        background: #ededed;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -110,11 +114,15 @@ $background-color: #d8d8d8;
             }
             figure {
                 display: flex;
-                justify-content: center;
-
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                width: 70%;
+                height: 260px;
                 img {
                     width: 50%;
                 }
+                overflow: scroll;
             }
             a{
                 color: #0045e5c1;
@@ -252,6 +260,9 @@ $background-color: #d8d8d8;
     }
     .bar {
         background: #191919;
+        button {
+            color: #cecece;
+        }
         .likes-btn {
             i {
                 color: #cecece;
@@ -259,7 +270,7 @@ $background-color: #d8d8d8;
         }
     }
     .loader {
-        background: #000000ea;
+        background: #000000;
         .spinner {
             border: 6px solid $background-color;
             border-top: 6px solid #000;

@@ -10,6 +10,7 @@ function SinglePage() {
     const [loading, setLoading] = useState(false)
     const [content, setContent] = useState({__html: ""});
     const [blog, setBlog] = useState([])
+    const [bloglikes, setBloglikes] = useState([])
     const [comments, setComments] = useState([])
     const [user, setUser] = useState([])
     const [pop, setPop] = useState('')
@@ -20,13 +21,13 @@ function SinglePage() {
     useEffect(() => {
         fetchSingleBlog();
         fetchComments();
-        
     }, []);
     const fetchSingleBlog = async () => {
       setLoading(true);
         await axios.get(`https://my-brand-production.up.railway.app/blogs/b/${id}`)
           .then(async (res) => {
             setBlog(res.data.BlogFetched);
+            setBloglikes(res.data.BlogFetched.liked)
             setContent({__html: res.data.BlogFetched.content})
             setLoading(false);
           })
@@ -117,9 +118,9 @@ function SinglePage() {
         <div className="front" id='front'>
           <img src={blog.imageUrl} alt={blog.title} className="back-front" ></img>
           <img src={blog.imageUrl} alt={blog.title} />
-          <p>{blog.title} {blog.liked}</p>
+          <p>{blog.title}</p>
         </div>
-        <Bbar id={id} likeCount={blog.liked} />
+        <Bbar id={id} likecount={bloglikes.length} length={comments.length} />
         <div className="content">
           <div dangerouslySetInnerHTML={content} className="content-box"  ></div>
         </div>
@@ -147,7 +148,8 @@ function SinglePage() {
                     username={user[index].usr} 
                     userdp = {user[index].dp}
                     date = {com.date}
-                    comment={com.comment} />
+                    comment={com.comment}
+                     />
                   )
               })}
             </div>
