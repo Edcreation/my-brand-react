@@ -76,7 +76,7 @@ function Login() {
                 <div className="input">
                     <p>Email</p>
                     <div className="email">
-                        <input type="email" name="email" id="email"
+                        <input type="email" name="email" 
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         />
@@ -85,7 +85,7 @@ function Login() {
                 <div className="input">
                     <p>Password</p>
                     <div className="password">
-                        <input type={password ? "text" : "password"} name="password" id="pass" 
+                        <input type={password ? "text" : "password"} name="password" 
                         value={pass}
                         onChange={e => setPass(e.target.value)}
                         />

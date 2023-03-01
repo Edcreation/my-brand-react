@@ -65,7 +65,7 @@ function Bbar(props) {
           <i className="fa fa-heart" onClick={Like}  style={{ color: 'red' }} aria-hidden="true"> Liked {count}</i>
           : <i className="fa fa-heart" onClick={Like} style={{ fontWeight: '400', }} aria-hidden="true"> Like {count}</i>
       }
-      q</div>
+      </div>
       : <button>{count} Likes</button> }
       <button onClick={scrollToComments}>{props.length} <i className="fa fa-comments" aria-hidden="true"></i> Comments</button>
     </div>

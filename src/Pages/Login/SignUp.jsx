@@ -68,7 +68,7 @@ function SignUp() {
                 <div className="input">
                     <p>Email</p>
                     <div className="email">
-                        <input type="email" name="email" id="email" 
+                        <input type="email" name="email"
                             value={email}
                             onChange={e => setEmail(e.target.value)} />
                     </div>
@@ -76,7 +76,7 @@ function SignUp() {
                 <div className="input">
                     <p>UserName</p>
                     <div className="email">
-                        <input type="text" name="username" id="username"
+                        <input type="text" name="username" 
 
                          value={username}
                          onChange={e => setUsername(e.target.value)}
