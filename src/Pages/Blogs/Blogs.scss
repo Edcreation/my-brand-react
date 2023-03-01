@@ -148,7 +148,11 @@ $background-color: #d8d8d857;
 
 }
 
-
+@media screen and (max-width: 1200px) {
+    .blogs .blogs-container {
+        grid-template-columns: auto auto auto;
+    } 
+}
 @media screen and (max-width: 1000px) {
     .blogs .blogs-container {
         grid-template-columns: auto auto;

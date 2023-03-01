@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams,Link } from 'react-router-dom'
 import Comment from './Comment'
+import Bbar from './Bbar'
 import axios from 'axios'
 import Dark from '../../../components/Dark'
 import './SinglePage.scss'
@@ -104,14 +105,21 @@ function SinglePage() {
     document.getElementById('meta').setAttribute("content", blog.title);
     document.getElementById('meta-image').setAttribute("name", "image");
     document.getElementById('meta-image').setAttribute("content", blog.imageUrl);
+    const scrollToTop = () => {
+      const element = document.getElementById('front');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
   return (
     <div className={`singlepage singlepage-${Dark()}` }>
           {loading ? <div className='loader'><div className="spinner"></div></div> : null}
-        <div className="front">
+        <div className="front" id='front'>
           <img src={blog.imageUrl} alt={blog.title} className="back-front" ></img>
           <img src={blog.imageUrl} alt={blog.title} />
-          <p>{blog.title}</p>
+          <p>{blog.title} {blog.liked}</p>
         </div>
+        <Bbar id={id} likeCount={blog.liked} />
         <div className="content">
           <div dangerouslySetInnerHTML={content} className="content-box"  ></div>
         </div>
@@ -125,8 +133,8 @@ function SinglePage() {
               <button id='btn'>{btn}</button>
             </form>
           </div> : <p className='comment-form'><Link to="/login">Login</Link> or <Link to="/signup">Sign Up</Link> to comment</p> }
-          <div className="comments">
-            <p >Comments</p>
+          <div className="comments" id='comments'>
+            <p >Comments <button onClick={scrollToTop}>Back To Top</button></p>
             {loading2 ?
             <div className="loader" >
               <div className="loaderBar"></div>

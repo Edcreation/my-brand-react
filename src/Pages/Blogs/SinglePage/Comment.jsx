@@ -34,6 +34,7 @@ function Comment(props) {
       }
       return Math.floor(seconds) + " seconds";
     }
+
   return (
   <div className="comment">
     <div className="com-image"><img src={image} alt="" /><p >{props.username}</p></div>

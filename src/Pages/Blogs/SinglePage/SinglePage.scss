@@ -5,8 +5,39 @@ $background-color: #d8d8d8;
 
 .singlepage {
     width: 100%;
+    
+    .bar {
+        width: 100%;
+        background: #cecece;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            cursor: pointer;
+            
+        }
+        .likes-btn {
+            margin-right: 10px;
+            i {
+                cursor: pointer;
+            }
+        }
+        .likecount {
+            margin-left: 10px;
+        }
+    }
+
+    
     .loader {
         width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+        bottom: 0;
         height: 700px;
         background: #9d9d9ddf;
         display: flex;
@@ -24,9 +55,9 @@ $background-color: #d8d8d8;
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            border: 6px solid $background-color;
-            border-top: 6px solid #000;
-            border-bottom: 6px solid #000;
+            border: 6px solid #000;
+            border-top: 6px solid #00000000;
+            border-bottom: 6px solid #00000000;
             right: 50%;
             top: 40px;
             transition: .6s;
@@ -218,6 +249,14 @@ $background-color: #d8d8d8;
 .singlepage-dark {
     .drop-down a {
         color: #000;
+    }
+    .bar {
+        background: #191919;
+        .likes-btn {
+            i {
+                color: #cecece;
+            }
+        }
     }
     .loader {
         background: #000000ea;

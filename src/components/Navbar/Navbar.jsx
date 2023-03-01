@@ -103,7 +103,11 @@ function Navbar() {
                       <i className="fa fa-caret-down" aria-hidden="true"></i>
                   </div>
                   <div className="nav-down-btn" onClick={toggleNavBar}  id='nav-btn'>
-                  <i className="fa fa-bars" aria-hidden="true"></i>
+                  {nav === '' ? 
+                  <i className="fa fa-bars" aria-hidden="true"></i> :
+                  
+                  <i className="fa fa-times" aria-hidden="true"></i>
+                  }
                   </div>
               </div>
             </nav>
@@ -132,8 +136,12 @@ function Navbar() {
                   <Link to="/signup">Sign Up</Link>
                   <Link to="/login" className="button">Login</Link>
               </div>
-              <div className="nav-down-btn" onClick={toggleNavBar}>
-                <i className="fa fa-bars" aria-hidden="true"></i>
+              <div className="nav-down-btn" onClick={toggleNavBar}  id='nav-btn'>
+                  {nav === '' ? 
+                  <i className="fa fa-bars" aria-hidden="true"></i> :
+                  
+                  <i className="fa fa-times" aria-hidden="true"></i>
+                  }
               </div>
           </div>
         </nav>
