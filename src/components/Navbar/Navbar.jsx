@@ -57,6 +57,7 @@ function Navbar() {
     if (localStorage.getItem("cooltoken") && localStorage.getItem("tempLog") && JSON.parse(localStorage.getItem("tempLog")).admin === true) {
       LoggedInAsAdmin = true
     }
+    
     const scrollToAbout = () => {
         const element = document.getElementById('aboutme');
         if (element) {
@@ -84,6 +85,7 @@ function Navbar() {
                       <Link to="/#aboutme" onClick={scrollToAbout}>About</Link>
                       <Link to="/blogs">Blogs</Link>
                       <Link to="/contact-me">Contacts</Link>
+                      {LoggedInAsAdmin ? <Link to="./dashboard">Dashboard</Link> : null  }
                       <div className="mode">
                         {theme === "dark" ? 
                         <img onClick={toggleTheme} src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="" /> : 

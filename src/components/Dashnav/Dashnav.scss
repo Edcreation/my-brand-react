@@ -1,0 +1,23 @@
+.dash-nav {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 610px;
+    background: #141414dd;
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 30px;
+        a {
+            width: 100%;
+            padding: 20px;
+            text-decoration: none;
+            color: #cecece;
+        }
+        a:hover {
+            background: #828282;
+        }
+    }
+}
